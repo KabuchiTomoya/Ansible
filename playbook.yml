@@ -1,0 +1,11 @@
+- hosts: target01
+  tasks:
+  - name: "test1"
+    shell: |
+        touch hoge
+- hosts: target02
+  tasks:
+    - name: "test2"
+      shell: |
+          touch bar
+          

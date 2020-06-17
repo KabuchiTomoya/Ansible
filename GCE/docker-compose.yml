@@ -1,0 +1,15 @@
+version: '3'
+services:
+  target01:
+    container_name: target01
+    build: .
+    tty: true
+    ports:
+      - "22221:22"
+
+  target02:
+    container_name: target02
+    build: .
+    tty: true
+    ports:
+      - "22222:22"
