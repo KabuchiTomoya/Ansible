@@ -1,0 +1,8 @@
+---
+- hosts: target03
+  tasks:
+    - import_role:
+        name: irixjp.role_example_hello
+
+    - import_role:
+        name: irixjp.role_example_uptime

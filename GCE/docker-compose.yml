@@ -1,15 +1,11 @@
-version: '3'
+version: "3"
 services:
   target01:
     container_name: target01
-    build: .
+    image: ubuntu
     tty: true
-    ports:
-      - "22221:22"
 
   target02:
     container_name: target02
-    build: .
+    image: centos
     tty: true
-    ports:
-      - "22222:22"
