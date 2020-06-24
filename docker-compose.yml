@@ -1,0 +1,11 @@
+version: "3"
+services:
+  local01:
+    container_name: local01
+    image: amazonlinux
+    tty: true
+
+  local02:
+    container_name: local02
+    image: kabuchitomoya/python
+    tty: true
