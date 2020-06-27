@@ -22,3 +22,10 @@ https://github.com/ansible/ansible/pull/11650
 
 docker_deamon <br>
 http://www.yasunaga-lab.bio.kyutech.ac.jp/EosJ/index.php/%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AE%E4%B8%AD%E3%81%AEDocker%E3%81%AB%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%8B%E3%82%89%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B
+
+追加
+---
+zabbixをローカルPCにてdockerで立ち上げて、リモートとローカルのdockerコンテナとリソースの情報の取得が出来ました。
+
+以下を参考に行いました<br>
+https://qiita.com/ko-he-8/items/c88c00dbc4e4f8b868b8
