@@ -27,5 +27,5 @@ http://www.yasunaga-lab.bio.kyutech.ac.jp/EosJ/index.php/%E3%83%AA%E3%83%A2%E3%8
 ---
 zabbixをローカルPCにてdockerで立ち上げて、リモートとローカルのdockerコンテナとリソースの情報の取得が出来ました。
 
-以下を参考に行いました<br>
+以下を参考に行いました。<br>
 https://qiita.com/ko-he-8/items/c88c00dbc4e4f8b868b8
