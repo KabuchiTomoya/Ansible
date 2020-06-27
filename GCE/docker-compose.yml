@@ -9,3 +9,16 @@ services:
     container_name: target02
     image: centos
     tty: true
+
+  zabbix-agent:
+    image: monitoringartist/dockbix-agent-xxl-limited:latest
+    hostname: zabbix-agent
+    environment:
+      ZA_Server: 0.0.0.0/0
+      ZA_ServerActive: zabbix-server
+    volumes:
+      - /:/rootfs
+      - /var/run:/var/run
+    restart: always
+    ports:
+      - "10050:10050"

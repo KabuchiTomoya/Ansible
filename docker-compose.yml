@@ -9,3 +9,42 @@ services:
     container_name: local02
     image: kabuchitomoya/python
     tty: true
+
+  zabbix-agent:
+    image: monitoringartist/dockbix-agent-xxl-limited:latest
+    hostname: zabbix-agent
+    environment:
+      ZA_Server: 0.0.0.0/0
+      ZA_ServerActive: zabbix-server
+    volumes:
+      - /:/rootfs
+      - /var/run:/var/run
+    restart: always
+
+  zabbix-db:
+    image: monitoringartist/zabbix-db-mariadb
+    environment:
+      MARIADB_USER: zabbix
+      MARIADB_PASS: root
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      # - ./zabbix-db-data:/var/lib/mysql
+    restart: always
+
+  zabbix-server:
+    image: monitoringartist/dockbix-xxl:latest
+    environment:
+      ZS_DBHost: zabbix-db
+      ZS_DBUser: zabbix
+      ZS_DBPassword: root
+      #XXL_zapix: 'true'
+      #XXL_grapher: 'true'
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      # - ./zabbix-server/alertscripts:/usr/local/share/zabbix/alertscripts
+    ports:
+      - 38080:80
+    depends_on:
+      - "zabbix-db"
+      - "zabbix-agent"
+    restart: always
