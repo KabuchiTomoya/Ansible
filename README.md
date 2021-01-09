@@ -1,4 +1,4 @@
-### AnsibleのDocker_Connection_Pluginを使うことで、GCE上のDocker-ContainerにAnsibleでアクセスして、コンテナを対象に普通のサーバと同じようにsetupモジュールによる構成情報取得が出来ました。
+### AnsibleのDocker_Connection_Pluginを使うことで、GCE上のDocker-ContainerにAnsibleでアクセスして、コンテナを対象に普通のサーバと同じようにsetupモジュールによる構成情報取得を行いました。
 手順
 --- 
 sshのポートフォワーディングでローカルPCのportへのアクセスをGCE上のDocker-Deamonに自動転送します。<br>
