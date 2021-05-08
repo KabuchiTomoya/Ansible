@@ -1,4 +1,4 @@
-### AnsibleのPluginを使い、GCE上で動作するDockerデーモンにAnsibleを介してリモート操作をして、コンテナ内の構成情報取得を行いました。
+### Ansibleを使ってリモートサーバー（GoogleCloudEngine)に立ち上げたDockerコンテナの構成情報取得を行いました。
 手順
 --- 
 sshのポートフォワーディングでローカルPCのportへのアクセスをGCE上のDocker-Deamonに自動転送します。<br>
